@@ -18,6 +18,12 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     //Lifecycle method, like "ComponentDidMount" on React
-    this.todos = this.todoService.getTodos();
+    this.todoService.getTodos().subscribe((todos) => (this.todos = todos));
+    //Is being return like a promise
+  }
+
+  deleteTodo(todo: Todo) {
+    //Delete from the UI
+    //Make delete request
   }
 }

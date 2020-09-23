@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,12 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
     TodoItemComponent,
     //Components go here, get automatically added via the CLI
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    //Module for handling http API requests
+  ],
   providers: [],
   bootstrap: [AppComponent],
   //gets bootstrap by default?

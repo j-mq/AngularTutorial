@@ -1,1 +1,7 @@
-<app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+<app-todo-item
+  *ngFor="let todo of todos"
+  [todo]="todo"
+  (deleteTodo)="deleteTodo($event)"
+>
+  <!-- catching the emitted function from child and assigning a function -->
+</app-todo-item>
