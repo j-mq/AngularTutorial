@@ -11,5 +11,10 @@ import { Component } from '@angular/core';
 //styleUrl: styles
 export class AppComponent {
   name: string = 'MyName';
-  //Property that can be used in the html with {{}}
+  //Property that can be used in the html with {{}} Pipes can be used along them for some functionality
+
+  constructor() {
+    //Runs on initialization
+    //Used to import services
+  }
 }
