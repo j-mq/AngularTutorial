@@ -1,0 +1,12 @@
+<form class="form" (ngSubmit)="onSubmit()">
+  <!-- event for submitting => ngSubmit, avoids having to do the JS event.target.values -->
+  <input
+    type="text"
+    name="title"
+    [(ngModel)]="title"
+    placeholder="Add Todo..."
+  />
+  <!-- binding to the declared property on the .ts file with ngModel-->
+  <!-- {{ title }} is binded directly to the input entry-->
+  <input type="submit" value="Submit" class="btn" />
+</form>
