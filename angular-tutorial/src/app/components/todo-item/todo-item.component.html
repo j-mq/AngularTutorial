@@ -1,7 +1,11 @@
 <div [ngClass]="setClasses()">
   <!-- ngClass can add dynamic classes, in this case it passes a function that returns the classes for the div -->
   <p>
-    <input (change)="onToggle(todo)" type="checkbox" />
+    <input
+      (change)="onToggle(todo)"
+      type="checkbox"
+      [checked]="todo.completed"
+    />
     {{ todo.title }}
     <button (click)="onDelete(todo)" class="del">x</button>
     <!-- events accesed through parenthesis, and functions are assigned to each -->
